@@ -5,6 +5,7 @@ import { ISelectOption } from '../../components/select/select.component';
 import { IQuiz, Question, QuestionID, Quiz, TOPIC } from '../../models/quiz.model';
 import { QuizNavigationService } from '../../services/quiz-navigation.service';
 import { QuizStoreService } from '../../services/quiz-store.service';
+import { RoutesService } from '../../services/routes.service';
 import { IMakeAnswerEvent } from './question-card/question-card.component';
 
 @Component({
@@ -36,7 +37,8 @@ export class QuizPageComponent {
 	constructor(
 		public quizStoreService: QuizStoreService,
 		private route: ActivatedRoute,
-		private quizNavigationService: QuizNavigationService
+		private quizNavigationService: QuizNavigationService,
+		public routesService: RoutesService
 	) {
 	}
 

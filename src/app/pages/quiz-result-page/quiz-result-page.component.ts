@@ -50,11 +50,7 @@ export class QuizResultPageComponent {
 			.pipe(take(1))
 			.subscribe((quizzes: Quiz[]) => {
 				quizzes.forEach((quiz: Quiz) => this.quizStoreService.clearQuiz(quiz));
-				const notSubmittedQuiz: Quiz = quizzes.find((quiz: Quiz) => !quiz.isSubmitted);
-				this.quizNavigationService.navigateThroughQuiz(
-					notSubmittedQuiz.topic,
-					notSubmittedQuiz.questions[0].id
-				);
+				this.quizNavigationService.navigateToHome();
 			});
 	}
 }

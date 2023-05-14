@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { QuizNavigationService } from '../../services/quiz-navigation.service';
 
 @Component({
 	selector: 'app-not-found-page',
@@ -9,11 +9,11 @@ import { Router } from '@angular/router';
 })
 export class NotFoundPageComponent {
 	constructor(
-		private router: Router
+		private quizNavigationService: QuizNavigationService
 	) {
 	}
 
-	backToQuiz() {
-		this.router.navigate(['']);
+	navigateToHome() {
+		this.quizNavigationService.navigateToHome();
 	}
 }

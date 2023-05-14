@@ -27,7 +27,7 @@
 			</div>
 			<div class="quiz-pagination">
 				<a *ngFor="let question of quiz.questions; let i = index"
-					 [routerLink]="['/quiz', quiz.topic, question.id]"
+					 [routerLink]="routesService.quizQuestion(question.topic, question.id)"
 					 routerLinkActive="active">
 					{{i + 1}}
 				</a>

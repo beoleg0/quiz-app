@@ -3,6 +3,7 @@ import { CanActivateFn, Router } from '@angular/router';
 import { map, take } from 'rxjs';
 import { Quiz } from '../models/quiz.model';
 import { QuizStoreService } from '../services/quiz-store.service';
+import { RoutesService } from '../services/routes.service';
 
 export const resultsPageGuard: CanActivateFn = (
 	route,
@@ -14,13 +15,13 @@ export const resultsPageGuard: CanActivateFn = (
 	return quizStoreService.quizzes$.pipe(
 		take(1),
 		map((quizzes: Quiz[]) => {
-			if (!quizzes.length) return router.createUrlTree(['404']);
+			if (!quizzes.length) return router.createUrlTree([RoutesService.routes.errors['404']]);
 
 			const isEveryQuizSubmitted: boolean = quizzes.every(quiz => quiz.isSubmitted);
 
 			return isEveryQuizSubmitted
 				? true
-				: router.createUrlTree(['']);
+				: router.createUrlTree([RoutesService.routes.home]);
 		})
 	);
 };
