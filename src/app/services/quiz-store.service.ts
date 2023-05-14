@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 import { BehaviorSubject, filter, forkJoin, Observable } from 'rxjs';
 import { AnswerID, IQuiz, QuestionID, Quiz, TOPIC } from '../models/quiz.model';
 import { QuizApiService } from './quiz-api.service';
@@ -14,7 +13,7 @@ export class QuizStoreService {
 		.pipe(filter((quizzes: Quiz[]) => !!quizzes.length)) as Observable<Quiz[]>;
 
 	constructor(
-		private quizApiService: QuizApiService,
+		private quizApiService: QuizApiService
 	) {
 		this.fillQuizzes();
 	}
