@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "question": "Which of the following data types stores a 64-bit integer in Java?",
+      "answers": [
+        {"answer": "int", "id": 1},
+        {"answer": "short", "id": 2},
+        {"answer": "long", "id": 3},
+        {"answer": "byte", "id": 4}
+      ],
+      "correct": 3,
+      "topic": "Java"
+    },
+    {
+      "id": 2,
+      "question": "What is the purpose of the 'final' keyword in Java?",
+      "answers": [
+        {"answer": "To create a class that cannot be inherited", "id": 1},
+        {"answer": "To create a method that cannot be overridden", "id": 2},
+        {"answer": "To create a variable that can only be assigned once", "id": 3},
+        {"answer": "All of the above", "id": 4}
+      ],
+      "correct": 4,
+      "topic": "Java"
+    },
+    {
+      "id": 3,
+      "question": "What does the 'static' keyword mean in Java?",
+      "answers": [
+        {"answer": "The method or variable is associated with the class, not instances of the class", "id": 1},
+        {"answer": "The variable's value cannot be changed", "id": 2},
+        {"answer": "The method can be called without an object", "id": 3},
+        {"answer": "Both 1 and 3", "id": 4}
+      ],
+      "correct": 4,
+      "topic": "Java"
+    },
+    {
+      "id": 4,
+      "question": "What is the purpose of the 'this' keyword in Java?",
+      "answers": [
+        {"answer": "To refer to the current object", "id": 1},
+        {"answer": "To create a new object", "id": 2},
+        {"answer": "To call a method", "id": 3},
+        {"answer": "To declare a variable", "id": 4}
+      ],
+      "correct": 1,
+      "topic": "Java"
+    },
+    {
+      "id": 5,
+      "question": "What is a constructor in Java?",
+      "answers": [
+        {"answer": "A method that is called when an object is created", "id": 1},
+        {"answer": "A variable that stores data", "id": 2},
+        {"answer": "A class that creates objects", "id": 3},
+        {"answer": "A keyword that initializes an object", "id": 4}
+      ],
+      "correct": 1,
+      "topic": "Java"
+    }
+  ]
+}

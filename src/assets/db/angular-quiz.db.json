@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "question": "What is the primary language used to write Angular?",
+      "answers": [
+        {"answer": "JavaScript", "id": 1},
+        {"answer": "TypeScript", "id": 2},
+        {"answer": "Java", "id": 3},
+        {"answer": "C#", "id": 4}
+      ],
+      "correct": 2,
+      "topic": "Angular"
+    },
+    {
+      "id": 2,
+      "question": "What is a decorator in Angular?",
+      "answers": [
+        {"answer": "A design pattern", "id": 1},
+        {"answer": "A function that adds metadata to a class, method, property, parameter, or method argument", "id": 2},
+        {"answer": "A way to style components", "id": 3},
+        {"answer": "A server-side rendering technique", "id": 4}
+      ],
+      "correct": 2,
+      "topic": "Angular"
+    },
+    {
+      "id": 3,
+      "question": "What does the ngIf directive do in Angular?",
+      "answers": [
+        {"answer": "It repeats a portion of the HTML template", "id": 1},
+        {"answer": "It binds data to a property", "id": 2},
+        {"answer": "It conditionally includes a template based on the value of an expression", "id": 3},
+        {"answer": "It defines a module", "id": 4}
+      ],
+      "correct": 3,
+      "topic": "Angular"
+    },
+    {
+      "id": 4,
+      "question": "What is the purpose of the Angular CLI?",
+      "answers": [
+        {"answer": "It's a command-line interface for creating and managing Angular applications", "id": 1},
+        {"answer": "It's a graphical interface for creating and managing Angular applications", "id": 2},
+        {"answer": "It's a web server", "id": 3},
+        {"answer": "It's a code editor", "id": 4}
+      ],
+      "correct": 1,
+      "topic": "Angular"
+    },
+    {
+      "id": 5,
+      "question": "What are services in Angular?",
+      "answers": [
+        {"answer": "UI components", "id": 1},
+        {"answer": "Data-binding mechanisms", "id": 2},
+        {"answer": "Server-side rendering techniques", "id": 3},
+        {
+          "answer": "Objects that get instantiated only once during the lifetime of an application for sharing methods and properties across it",
+          "id": 4
+        }
+      ],
+      "correct": 4,
+      "topic": "Angular"
+    }
+  ]
+}

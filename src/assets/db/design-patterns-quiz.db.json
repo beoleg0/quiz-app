@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "question": "Which design pattern provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation?",
+      "answers": [
+        {"answer": "Composite", "id": 1},
+        {"answer": "Iterator", "id": 2},
+        {"answer": "Visitor", "id": 3},
+        {"answer": "Decorator", "id": 4}
+      ],
+      "correct": 2,
+      "topic": "Design Patterns"
+    },
+    {
+      "id": 2,
+      "question": "Which design pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable?",
+      "answers": [
+        {"answer": "Observer", "id": 1},
+        {"answer": "State", "id": 2},
+        {"answer": "Strategy", "id": 3},
+        {"answer": "Singleton", "id": 4}
+      ],
+      "correct": 3,
+      "topic": "Design Patterns"
+    },
+    {
+      "id": 3,
+      "question": "Which design pattern ensures a class has only one instance and provides a global point of access to it?",
+      "answers": [
+        {"answer": "Factory", "id": 1},
+        {"answer": "Singleton", "id": 2},
+        {"answer": "Builder", "id": 3},
+        {"answer": "Prototype", "id": 4}
+      ],
+      "correct": 2,
+      "topic": "Design Patterns"
+    },
+    {
+      "id": 4,
+      "question": "Which design pattern separates the construction of a complex object from its representation so that the same construction process can create different representations?",
+      "answers": [
+        {"answer": "Builder", "id": 1},
+        {"answer": "Abstract Factory", "id": 2},
+        {"answer": "Prototype", "id": 3},
+        {"answer": "Adapter", "id": 4}
+      ],
+      "correct": 1,
+      "topic": "Design Patterns"
+    },
+    {
+      "id": 5,
+      "question": "Which design pattern defines an interface for creating an object, but lets subclasses decide which class to instantiate. It lets a class defer instantiation to subclasses?",
+      "answers": [
+        {"answer": "Prototype", "id": 1},
+        {"answer": "Decorator", "id": 2},
+        {"answer": "Factory Method", "id": 3},
+        {"answer": "Composite", "id": 4}
+      ],
+      "correct": 3,
+      "topic": "Design Patterns"
+    }
+  ]
+}
