@@ -1,0 +1,18 @@
+@import "src/assets/styles/mixins";
+
+.quiz-content__question {
+  margin-bottom: rem(15px);
+}
+
+.quiz-content__question-title {
+  margin-bottom: rem(5px);
+}
+
+.quiz-content__answers {
+  display: grid;
+  gap: rem(10px);
+
+  button {
+    text-align: left;
+  }
+}

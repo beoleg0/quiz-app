@@ -1,0 +1,26 @@
+.btn {
+  padding: rem(5px) rem(10px);
+  border: var(--primary-500) 1px solid;
+  border-radius: rem(5px);
+  cursor: pointer;
+  background: var(--white);
+  color: var(--black);
+  display: block;
+
+  &:hover {
+    background: var(--primary-700);
+    border: var(--primary-700) 1px solid;
+    color: var(--white);
+  }
+
+  &.active {
+    background: var(--primary-500);
+    color: var(--white);
+
+    &:hover {
+      background: var(--primary-700);
+      border: var(--primary-700) 1px solid;
+      color: var(--white);
+    }
+  }
+}

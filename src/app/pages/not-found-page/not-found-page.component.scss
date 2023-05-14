@@ -1,0 +1,8 @@
+@import "src/assets/styles/mixins";
+
+.page-404 {
+  display: grid;
+  place-content: center;
+  gap: rem(10px);
+  margin-top: rem(15px);
+}

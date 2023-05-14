@@ -1,0 +1,42 @@
+<div class="quiz-page">
+	<div class="topic-select">
+		<app-select (valueChange)="selectTopic($event)"
+								[options]="topicsOptions$ | async"
+								[selectedValue]="selectedTopic$ | async">
+		</app-select>
+	</div>
+
+	<div appIsland class="quiz" *ngIf="(quiz$ | async) as quiz">
+		<div class="quiz-title h4">{{selectedTopic$ | async}}</div>
+
+		<div class="quiz-content-container">
+			<div class="quiz-content">
+				<ng-container *ngFor="let question of quiz.questions; let i = index">
+							<app-question-card
+								*ngIf="(currentQuestionID | async) === question.id"
+								(makeAnswer)="makeAnswer($event, quiz.topic)"
+								[question]="question"
+								[index]="i + 1">
+							</app-question-card>
+				</ng-container>
+
+				<div class="centred-actions">
+					<button appButton (click)="goPrevQuestion(quiz.questions)">Prev</button>
+					<button appButton (click)="goNextQuestion(quiz.questions)">Next</button>
+				</div>
+			</div>
+			<div class="quiz-pagination">
+				<a *ngFor="let question of quiz.questions; let i = index"
+					 [routerLink]="['/quiz', quiz.topic, question.id]"
+					 routerLinkActive="active">
+					{{i + 1}}
+				</a>
+			</div>
+		</div>
+
+		<div class="centred-actions end">
+			<button appButton (click)="submitQuiz(quiz)">Submit page</button>
+			<button appButton (click)="submitAll()">Submit all and finish</button>
+		</div>
+	</div>
+</div>
