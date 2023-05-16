@@ -1,16 +1,16 @@
-<div class="quiz-page">
-	<div class="topic-select">
+<div class="d-grid gap-3">
+	<div class="d-flex justify-content-end">
 		<app-select (valueChange)="selectTopic($event)"
 								[options]="topicsOptions$ | async"
 								[selectedValue]="selectedTopic$ | async">
 		</app-select>
 	</div>
 
-	<div appIsland class="quiz" *ngIf="(quiz$ | async) as quiz">
-		<div class="quiz-title h4">{{selectedTopic$ | async}}</div>
+	<div class="island" *ngIf="(quiz$ | async) as quiz">
+		<div class="h4">{{selectedTopic$ | async}}</div>
 
-		<div class="quiz-content-container">
-			<div class="quiz-content">
+		<div class="row gap-3 mt-3">
+			<div class="col">
 				<ng-container *ngFor="let question of quiz.questions; let i = index">
 							<app-question-card
 								*ngIf="(currentQuestionID | async) === question.id"
@@ -20,23 +20,25 @@
 							</app-question-card>
 				</ng-container>
 
-				<div class="centred-actions">
-					<button appButton (click)="goPrevQuestion(quiz.questions)">Prev</button>
-					<button appButton (click)="goNextQuestion(quiz.questions)">Next</button>
+				<div class="d-flex justify-content-center mt-3 gap-2">
+					<button class="btn btn-outline-primary" (click)="goPrevQuestion(quiz.questions)">Prev</button>
+					<button class="btn btn-outline-primary" (click)="goNextQuestion(quiz.questions)">Next</button>
 				</div>
 			</div>
-			<div class="quiz-pagination">
+
+			<div class="d-flex gap-2 align-items-start justify-content-center col-sm-12 col-lg-3">
 				<a *ngFor="let question of quiz.questions; let i = index"
 					 [routerLink]="routesService.quizQuestion(question.topic, question.id)"
-					 routerLinkActive="active">
+					 routerLinkActive="bg-primary text-white"
+					 class="btn btn-outline-primary">
 					{{i + 1}}
 				</a>
 			</div>
 		</div>
 
-		<div class="centred-actions end">
-			<button appButton (click)="submitQuiz(quiz)">Submit page</button>
-			<button appButton (click)="submitAll()">Submit all and finish</button>
+		<div class="d-flex gap-2 justify-content-center justify-content-md-end mt-3">
+			<button class="btn btn-outline-primary" (click)="submitQuiz(quiz)">Submit page</button>
+			<button class="btn btn-outline-primary" (click)="submitAll()">Submit all and finish</button>
 		</div>
 	</div>
 </div>

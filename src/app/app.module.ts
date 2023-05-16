@@ -6,8 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SelectComponent } from './components/select/select.component';
-import { ButtonDirective } from './directives/button.directive';
-import { IslandDirective } from './directives/island.directive';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { QuestionCardComponent } from './pages/quiz-page/question-card/question-card.component';
 import { QuizPageComponent } from './pages/quiz-page/quiz-page.component';
@@ -16,9 +14,7 @@ import { QuizResultPageComponent } from './pages/quiz-result-page/quiz-result-pa
 @NgModule({
 	declarations: [
 		AppComponent,
-		ButtonDirective,
 		HeaderComponent,
-		IslandDirective,
 		NotFoundPageComponent,
 		QuestionCardComponent,
 		QuizPageComponent,

@@ -1,40 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 @import "assets/styles/mixins";
 @import "assets/styles/variables";
-@import "assets/styles/reset";
-@import "assets/styles/utilities";
-@import "assets/styles/fonts";
-@import "assets/styles/components/button";
 @import "assets/styles/components/island";
 
+@import "node_modules/bootstrap/scss/functions";
+
+$font-family-base: 'Inter', sans-serif;
+$line-height-base: 1.51;
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/root";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/forms/form-select";
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/utilities/api";
+
 :root {
-  --primary-50: #{$primary-50};
-  --primary-100: #{$primary-100};
-  --primary-200: #{$primary-200};
-  --primary-300: #{$primary-300};
-  --primary-400: #{$primary-400};
-  --primary-500: #{$primary-500};
-  --primary-600: #{$primary-600};
-  --primary-700: #{$primary-700};
-  --primary-800: #{$primary-800};
-  --primary-900: #{$primary-900};
   --white: #{$white};
   --black: #{$black};
 }
 
 body {
-  @extend .body-1;
-  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.005em;
   color: $black;
 }
 
-.centred-actions {
-  display: flex;
-  justify-content: center;
-  margin-top: rem(15px);
-  gap: rem(10px);
-
-  &.end {
-    justify-content: flex-end;
-  }
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 rem(15px);
 }

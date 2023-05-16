@@ -1,11 +1,11 @@
-<div appIsland class="result-page" *ngIf="(overallStats$ | async) as overall">
-	<h1 class="h4">Results</h1>
-	<p class="result-page__total">
+<div class="island d-grid" *ngIf="(overallStats$ | async) as overall">
+	<h1 class="h4 mb-1">Results</h1>
+	<p class="mb-3">
 		{{overall.correctCount}} of {{overall.questionsCount}} questions answered correctly
 	</p>
 
-	<h2 class="h6">Categories</h2>
-	<ul class="result-page__categories-list">
+	<h2 class="h6 mb-2">Categories</h2>
+	<ul class="list mb-3">
 		<li *ngFor="let stat of (topicsStats$ | async)">
 			<span class="category">{{stat.topic}}</span>
 			<span class="underline"></span>
@@ -17,5 +17,5 @@
 			<span class="score">{{overall.correctCount}} of {{overall.questionsCount}}</span>
 		</li>
 	</ul>
-	<button appButton class="result-page__button" (click)="clearQuizzes()">Click Here to Continue</button>
+	<button class="btn btn-outline-primary" (click)="clearQuizzes()">Click Here to Continue</button>
 </div>

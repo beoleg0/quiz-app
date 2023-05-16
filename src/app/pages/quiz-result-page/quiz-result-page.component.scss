@@ -1,27 +1,21 @@
 @import "src/assets/styles/mixins";
 
-.result-page {
-  display: grid;
-}
+/*
+  These styles I left because bootstrap doesn't have similar list styles
+  and it was easier to leave them as they are than to rewrite them with BS classes.
 
-.h4, .h6 {
-  margin-bottom: rem(5px);
-}
-
-.result-page__total {
-  margin-bottom: rem(15px);
-}
-
-.result-page__categories-list {
+  Also some styles that I can change to BS classes are left as they are because
+  of consistency and readability.
+*/
+.list {
   list-style-type: none;
   padding: 0;
-  margin-bottom: rem(15px);
 
   li {
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    margin-bottom: rem(5px);
+    margin-bottom: .25rem;
     position: relative;
 
     &:last-of-type {
@@ -41,6 +35,6 @@
   }
 }
 
-.result-page__button {
+.btn {
   justify-self: center;
 }

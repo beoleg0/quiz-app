@@ -1,14 +1,11 @@
-<div class="quiz-content__question">
-	<div class="quiz-content__question-title h6">
-		{{index ? 'Question ' + index : 'Question'}}
-	</div>
-	<div class="quiz-content__question-text">{{question.question}}</div>
+<div>
+	<div class="mb-2 h6">{{index ? 'Question ' + index : 'Question'}}</div>
+	<div>{{question.question}}</div>
 </div>
-<div class="quiz-content__answers">
+<div class="d-grid gap-2 mt-2">
 	<button (click)="onAnswerMake(answer.id)"
 					*ngFor="let answer of question.answers"
-					appButton
-					[isActive]="answer.id === question.selectedAnswer">
+					[ngClass]="answerButtonClasses(answer.id, question)">
 		{{answer.answer}}
 	</button>
 </div>

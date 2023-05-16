@@ -24,4 +24,14 @@ export class QuestionCardComponent {
 			questionId: this.question.id
 		});
 	}
+
+	answerButtonClasses(answerID: AnswerID, question: IQuestion): Record<string, boolean> {
+		const isRightAnswer = answerID === question.selectedAnswer;
+		return {
+			'btn': true,
+			'text-start': true,
+			'btn-primary': isRightAnswer,
+			'btn-outline-primary': !isRightAnswer
+		};
+	}
 }
